@@ -9,7 +9,7 @@ var data = {
     ],
 
     stbar_bottom_left:[
-        {name: 'Overdraft Alert', value: 1},
+        {name: 'Overdraft Alert', value: 2},
         {name: 'Overdraft', value: 0},
         {name: 'Awaiting Approval', value: 2},
     ],
