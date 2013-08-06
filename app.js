@@ -35,9 +35,9 @@ var data = {
 Ext.application({
 	name: 'xttest',
 	launch: function(){
-		var tpl_status_bar = Ext.XTemplate.from('tpl-status-bar');
-        var tpl_breadcrumb = Ext.XTemplate.from('tpl-breadcrumb');
-    	panel = new Ext.create('Ext.panel.Panel', {
+		tpl_status_bar = Ext.XTemplate.from('tpl-status-bar');
+        tpl_breadcrumb = Ext.XTemplate.from('tpl-breadcrumb');
+    	panel = Ext.create('Ext.panel.Panel', {
         height: 300,
         items:[{
             xtype:'textfield'
