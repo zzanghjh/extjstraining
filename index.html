@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Status Bar</title>
+        <link rel="stylesheet" href="ext-4/resources/css/ext-all.css">
+        <link rel="stylesheet" href="app.css">
+        <script src="ext-4/ext-all-debug.js"></script>
+        <script src="app.js"></script>
+</head>
+<body>
+<textarea id="tpl-status-bar" style="display:none">
+	<div class="table">
+		<div class="table-cell plus-sign">+</div>
+		<div class="status-bar-top">
+		    <tpl for="stbar_top">
+				<span class="status-bar-title">{name}<br/><span class="status-bar-value">{value}</span></span>
+			</tpl>
+		</div>
+		<div class="status-bar-bottom">
+			<tpl for="stbar_bottom_left">
+				<span class="pagination-centered bt-status-bar-title">{name}<br/><span class="status-bar-value">{value}</span></span>
+			</tpl>
+			<tpl for="stbar_bottom_right">
+				<span class="bt-status-bar-title">{name}<br/><span class="status-bar-value">{value}</span></span>
+			</tpl>
+		</div>
+	</div>
+</textarea>
+
+<textarea id="tpl-breadcrumb" style="display:none">
+	<div class="breadcrumb">
+		<tpl for="breadcrumb">
+			<a href="{link}">{name}</a>
+		</tpl>
+	</div>
+</textarea>
+
+</body>
+</html>
