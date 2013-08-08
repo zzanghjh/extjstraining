@@ -6,19 +6,11 @@ Ext.define('Xttest.store.Statuses',{
       autoSync: true,
       listeners:{
             load:function(){
-                  var panel = Ext.create('Ext.panel.Panel', {
-                    height: 300,
-                    width: 1296,
-                    renderTo: Ext.getBody(),
-                    flex:1,
-                    layout:{
-                        type:'fit'
-                    }
-                });
-                  tpl_status_bar = Ext.XTemplate.from('tpl-status-bar');
-                  tpl_breadcrumb = Ext.XTemplate.from('tpl-breadcrumb');
-                  tpl_status_bar.overwrite(panel.body, datastore.getAt(0).data);
-                  tpl_breadcrumb.insertBefore(panel.body, datastore.getAt(0).data);
+                this.p = Ext.ComponentQuery.query('#mainpanel')[0];
+                tpl_status_bar = Ext.XTemplate.from('tpl-status-bar');
+                tpl_breadcrumb = Ext.XTemplate.from('tpl-breadcrumb');
+                tpl_status_bar.overwrite(this.p.body, this.getAt(0).data);
+                tpl_breadcrumb.insertBefore(this.p.body, this.getAt(0).data);
                   
             }
       }
